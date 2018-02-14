@@ -1,18 +1,8 @@
 const mongoose = require('mongoose')
-const validator  = require('validator')
+const validator = require('validator')
 const bcrypt = require('bcryptjs')
-const ExcercisesSchema = mongoose.Schema({
-    day : {
-        dayName : {
-            type : String
-        },
-        exercise : {
-            type : Array
-        }
-    }
-})
 
-const UserSchema = mongoose.Schema({
+const TrainerSchema = mongoose.Schema({
     name : {
         type : String,
         require : true
@@ -33,16 +23,15 @@ const UserSchema = mongoose.Schema({
         require : true,
         min : 6
     },
-    programOpted : {
-        type : String
-    },
-    excercises : [ExcercisesSchema]
+    trainees : {
+        type : mongoose.Schema.Types.ObjectId,
+        ref : 'users'
+    }
 })
 
-
 //before saving the password hash it
-UserSchema.pre('save', function(next){
-    var user = this;
+TrainerSchema.pre('save', function(next){
+    var trainer = this;
     if(!this.isModified('password')){
         return next();
     }
@@ -53,7 +42,7 @@ UserSchema.pre('save', function(next){
                 return next(err);
             }
             bcrypt.hash(this.password, salt, function(err, hash) {
-                user.password = hash;
+                trainer.password = hash;
                 return next();
             });
         });
@@ -62,13 +51,12 @@ UserSchema.pre('save', function(next){
 })
 
 //mehtods for comparing passwords
-UserSchema.methods.comparePassword = function comparePassword(password){
-    var user = this;
-    return bcrypt.compareSync(password, user.password);
+TrainerSchema.methods.comparePassword = function comparePassword(password){
+    var trainer = this;
+    return bcrypt.compareSync(password, trainer.password);
 }
 
 
+const TrainerModel = mongoose.model('trainers', TrainerSchema);
 
-const UserModel = mongoose.model('users', UserSchema);
-
-module.exports = {UserModel}
+module.exports = {TrainerModel};

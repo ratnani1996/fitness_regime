@@ -18,9 +18,11 @@
   },
   "homepage": "https://github.com/ratnani1996/fitness_regime#readme",
   "dependencies": {
+    "bcryptjs": "^2.4.3",
     "body-parser": "^1.18.2",
     "express": "^4.16.2",
     "mongoose": "^5.0.5",
-    "morgan": "^1.9.0"
+    "morgan": "^1.9.0",
+    "validator": "^9.4.0"
   }
 }
