@@ -1,0 +1,77 @@
+
+.tab-content {
+    width: 100%;
+    margin: 0 auto;
+    padding: 0;
+}
+
+.trendImage{
+    height: 289.81px;
+    width: 448.75px;
+    
+    -moz-transition: all 0.3s;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+.trendImage:hover{
+    height: 320px;
+    width: 500px;
+     -moz-transform: scale(1.1);
+  -webkit-transform: scale(1.1);
+  transform: scale(1.1);
+}
+
+.carousel-item{
+    height: 
+}
+
+.divAlign{
+    display:flex;
+    overflow: hidden;
+}
+ 
+
+.panel-footer{
+    margin-top: 30px;
+    padding-top: 35px;
+    padding-bottom: 30px;
+    background-color: #222;
+    border-top: 0;
+}
+
+.panel-footer div.row{
+    margin-bottom: 35px;
+}
+
+#hours, #address {
+    line-height: 2;
+}
+/*
+
+#hours > span, #address > span{
+    font-size: 1.3em;
+}
+*/
+
+#address p,#hours p, #testimonials p {
+    color: #557abc;
+    
+    line-height: 1.8em;
+}
+
+
+
+#testimonials p:nth:child(2){
+    margin-top: 25px;
+}
+.container-fluid{
+    box-shadow: 0 0 50px #3F0C1F;
+    border: 2px solid #3F0C1F;
+}
+
+#strike{
+    color: red;
+    margin-left: 5px; 
+    overflow: hidden;
+}
+
