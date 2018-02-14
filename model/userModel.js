@@ -2,14 +2,13 @@ const mongoose = require('mongoose')
 const validator  = require('validator')
 const bcrypt = require('bcryptjs')
 const ExcercisesSchema = mongoose.Schema({
-    day : {
-        dayName : {
-            type : String
-        },
-        exercise : {
-            type : Array
-        }
+    dayName : {
+        type : String
+    },
+    exercise : {
+        type : Array
     }
+    
 })
 
 const UserSchema = mongoose.Schema({
