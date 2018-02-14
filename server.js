@@ -47,6 +47,7 @@ app.use((req, res)=>{
     res.status(404).send('Trying to be smart BRUH!!!!')
 })
 
-app.listen(3000, ()=>{
-    console.log(`Listeninig to port 3000`)
+var PORT = process.env.PORT || 3000
+app.listen(PORT, ()=>{
+    console.log(`Listeninig to port ${PORT}`)
 })
