@@ -23,10 +23,10 @@ const TrainerSchema = mongoose.Schema({
         require : true,
         min : 6
     },
-    trainees : {
+    trainees : [{
         type : mongoose.Schema.Types.ObjectId,
         ref : 'users'
-    },
+    }],
     description : {
         type : String
     },

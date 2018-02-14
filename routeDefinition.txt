@@ -1,9 +1,10 @@
-/ == homepage
-/trainer/ == for trainer section
-/trainer/signup == for trainer signup
-/trainer/login == for trainer login
-/trainer/profile == for trainer profile
-/user/ == for user section
+/ == homepage done
+
+/trainer/signup == for trainer signup done
+/trainer/login == for trainer login done
+/trainer/profile == for trainer profile done
+
 /user/signup == for user signup
 /user/login == for user login
+/user/picktrainer == for picking up the trainer
 /user/profile == for user profile
