@@ -1,0 +1,9 @@
+/ == homepage
+/trainer/ == for trainer section
+/trainer/signup == for trainer signup
+/trainer/login == for trainer login
+/trainer/profile == for trainer profile
+/user/ == for user section
+/user/signup == for user signup
+/user/login == for user login
+/user/profile == for user profile

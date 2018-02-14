@@ -38,9 +38,9 @@ app.use(express.static('./public'))
 //use local routes
 app.use(require('./controller/routes/local_routes'))
 //trainer passport routes
-app.use(require('./controller/routes/passport_trainer'));
+app.use('/trainer', require('./controller/routes/passport_trainer'));
 //user passport routes
-app.use(require('./controller/routes/passport_users'));
+app.use('/user', require('./controller/routes/passport_users'));
 
 //if the user goes to another path
 app.use((req, res)=>{
