@@ -24,22 +24,22 @@ Router.get('/', (req, res)=>{
 //             })
 // })
 
-Router.post('/user/info', (req, res)=>{
-    const user = new UserModel({
-        name : req.body.name,
-        phone : req.body.phone,
-        password : req.body.password,
-        programOpted : req.body.program,
-        excercises : req.body.excercises
-    })
-    user.save()
-        .then((user)=>{
-            res.json(user);
-        })
-        .catch((err)=>{
-            res.json(err)
-        })
-})
+// Router.post('/user/info', (req, res)=>{
+//     const user = new UserModel({
+//         name : req.body.name,
+//         phone : req.body.phone,
+//         password : req.body.password,
+//         programOpted : req.body.program,
+//         excercises : req.body.excercises
+//     })
+//     user.save()
+//         .then((user)=>{
+//             res.json(user);
+//         })
+//         .catch((err)=>{
+//             res.json(err)
+//         })
+// })
 
 
 

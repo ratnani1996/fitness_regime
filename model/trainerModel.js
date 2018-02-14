@@ -26,6 +26,12 @@ const TrainerSchema = mongoose.Schema({
     trainees : {
         type : mongoose.Schema.Types.ObjectId,
         ref : 'users'
+    },
+    description : {
+        type : String
+    },
+    image : {
+        type : String
     }
 })
 

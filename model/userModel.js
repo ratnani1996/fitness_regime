@@ -35,7 +35,19 @@ const UserSchema = mongoose.Schema({
     programOpted : {
         type : String
     },
-    excercises : [ExcercisesSchema]
+    excercises : [ExcercisesSchema],
+    height : {
+        type : Number,
+        require : true
+    },
+    weight : {
+        type : Number,
+        require : true
+    },
+    image : {
+        type : String,
+        require : true
+    }
 })
 
 

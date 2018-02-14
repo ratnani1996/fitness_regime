@@ -14,7 +14,7 @@ var checkAuthentication = (req, res, next)=>{
 
 
 Router.get('/profile', checkAuthentication, (req, res)=>{
-    //send data to profile page
+
 })
 
 Router.post('/login', passport.authenticate('local-login', {failureRedirect : '/login', successRedirect : '/profile'}))

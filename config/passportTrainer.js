@@ -33,7 +33,10 @@ passport.use('local-signup', new LocalStrategy({
             else{
                 var newTrainer = new TrainerModel({
                     phone : phone,
-                    password : pass
+                    password : pass,
+                    name : req.body.name,
+                    description : req.body.description,
+                    image : req.body.image
                 })
                 TrainerModel.save()
                        .then((trainer)=>{
@@ -46,6 +49,35 @@ passport.use('local-signup', new LocalStrategy({
             console.log(err);
             done(err, null, req.flash('message' , 'It happened to have some error'));
         })
+}))
+
+
+passport.use('local-login', new LocalStrategy({
+    usernameField : 'phone',
+    passwordField : 'password',
+    passReqToCallback : true,
+    session : false
+}, (req, phone, pass, done)=>{
+    TrainerModel.findOne({phone : phone})
+        .then((trainer)=>{
+            if(trainer){
+                // return done(null, user)
+                if(trainer.comparePassword(pass)){
+                    return done(null, trainer);
+                }
+                else{
+                    return done(null, false, req.flash('message' , `Password is wrong`))
+                }
+            }
+            else{
+                return done(null, false, req.flash('message', 'User does not exists please sign up'))
+            }
+        })
+        .catch((err)=>{
+            console.log(err);
+            done(err, null, req.flash('message' , 'It happened to have some error'));
+        })
+
 }))
 
 module.exports = {passport}
