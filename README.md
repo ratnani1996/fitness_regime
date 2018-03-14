@@ -1,16 +1,48 @@
 # fitness_regime
 
-Complete webapp for a fitness center.
+> Fitness training website for both trainers and users
 
-A trainer and a customer can access their individual profile.
-A trainer can guide his customer for exercises.
-A user has the freedom to choose his personal trainer.
+background details relevant to understanding what this module does
 
-This webapp uses passport authentication for indiviaual profile authentication.
+## Usage
 
+```js
+var fitnessRegime = require('fitness_regime')
 
-To use this application 
-install all the node modules
-type the command npm install to install the modules
-then type npm start to start the application
-the application will start on localhost:3000
+console.log('hello warld')
+```
+
+outputs
+
+```
+hello warld
+```
+
+## API
+
+```js
+var fitnessRegime = require('fitness_regime')
+```
+
+See [api_formatting.md](api_formatting.md) for tips.
+
+## Install
+
+With [npm](https://npmjs.org/) installed, run
+
+```
+$ npm install fitness_regime
+```
+
+## Acknowledgments
+
+fitness_regime was inspired by..
+
+## See Also
+
+- [`noffle/common-readme`](https://github.com/noffle/common-readme)
+- ...
+
+## License
+
+MIT
