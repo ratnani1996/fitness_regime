@@ -1,22 +1,11 @@
 {
   "name": "fitness_regime",
   "version": "1.0.0",
-  "description": "",
+  "description": "Fitness training website for both trainers and users",
   "main": "server.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/ratnani1996/fitness_regime.git"
-  },
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/ratnani1996/fitness_regime/issues"
-  },
-  "homepage": "https://github.com/ratnani1996/fitness_regime#readme",
+  "repository": "https://github.com/ratnani1996/fitness_regime.git",
+  "author": "ratnani1996 <himanshuratnani1996@gmail.com>",
+  "license": "MIT",
   "dependencies": {
     "bcryptjs": "^2.4.3",
     "body-parser": "^1.18.2",
